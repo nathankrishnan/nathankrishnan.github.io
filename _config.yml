@@ -1,0 +1,52 @@
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+
+# Site settings
+title: "Nathan Krishnan"
+description: > # this means to ignore newlines until "email:"
+   I work with tech startups by day and write code by night.
+
+email: a-mail@mail.mail
+
+url: "http://nathankrishnan.com"
+baseurl: ""
+
+# permalink: /:title
+
+#blog logo
+logo: "/assets/images/profile.jpg"
+# blog cover
+# cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+
+name: 'Nathan Krishnan'
+author: 'Nathan Krishnan'
+author_image: "/assets/images/profile.jpg"
+
+paginate:	5
+
+
+
+#used to display twitter cards
+twitter_handle: '@nathankrishnan'
+
+#disqus shortname
+disqus: nathank
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/nathankrishnan
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+
+  - icon:	github
+    url:	https://github.com/nathankrishnan
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:

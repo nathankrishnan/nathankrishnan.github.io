@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nathan Krishnan</title>
+    <description>I work with tech startups by day and write code by night.
+</description>
+    <link>http://nathankrishnan.github.io/</link>
+    <atom:link href="http://nathankrishnan.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 07 Apr 2016 02:09:31 -0400</pubDate>
+    <lastBuildDate>Thu, 07 Apr 2016 02:09:31 -0400</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Testing Markdown</title>
+        <description>&lt;h1 id=&quot;mediator-formats-and-css-features&quot;&gt;Mediator Formats and CSS features&lt;/h1&gt;
+
+&lt;h1 id=&quot;examples-for-different-formats-and-css-features&quot;&gt;Examples for different formats and css features&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://airpair-blog.s3.amazonaws.com/wp-content/uploads/2014/07/swift.png&quot; alt=&quot;Swift&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;header-formats&quot;&gt;Header Formats&lt;/h1&gt;
+&lt;p&gt;#Header1
+##Header2&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+
+  &lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
+&lt;p&gt;##orderd lists
+1. one
+2. two
+3. three&lt;/p&gt;
+
+&lt;h2 id=&quot;unorderd-lists&quot;&gt;unorderd lists&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Plum&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;example link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;combinations&quot;&gt;Combinations&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Plum&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sun, 03 Apr 2016 00:00:00 -0400</pubDate>
+        <link>http://nathankrishnan.github.io/markdown/2016/04/03/hello.html</link>
+        <guid isPermaLink="true">http://nathankrishnan.github.io/markdown/2016/04/03/hello.html</guid>
+        
+        
+        <category>markdown</category>
+        
+      </item>
+    
+      <item>
+        <title>Turn down for whaat</title>
+        <description>&lt;h1 id=&quot;what&quot;&gt;what&lt;/h1&gt;
+
+&lt;h1 id=&quot;examples-for-different-formats-and-css-features&quot;&gt;Examples for different formats and css features&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://airpair-blog.s3.amazonaws.com/wp-content/uploads/2014/07/swift.png&quot; alt=&quot;Swift&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;header-formats&quot;&gt;Header Formats&lt;/h1&gt;
+&lt;p&gt;#Header1
+##Header2&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+
+  &lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
+&lt;p&gt;##orderd lists
+1. one
+2. two
+3. three&lt;/p&gt;
+
+&lt;h2 id=&quot;unorderd-lists&quot;&gt;unorderd lists&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+  &lt;li&gt;Plum&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;example link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;combinations&quot;&gt;Combinations&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Banana&lt;/li&gt;
+    &lt;li&gt;Plum&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 05 May 2015 00:00:00 -0400</pubDate>
+        <link>http://nathankrishnan.github.io/markdown/2015/05/05/what.html</link>
+        <guid isPermaLink="true">http://nathankrishnan.github.io/markdown/2015/05/05/what.html</guid>
+        
+        
+        <category>markdown</category>
+        
+      </item>
+    
+  </channel>
+</rss>
