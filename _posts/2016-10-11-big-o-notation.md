@@ -16,7 +16,7 @@ Let's take a look at some examples to make this concept seem less foreign.
 
 #Example 1
 
-```
+```bash
 var inventory = ["iPhone 7", "Macbook Pro", "Mac Pro"]
 
 func displayFirstInventoryItem(items: [String]) {
