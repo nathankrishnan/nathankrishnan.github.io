@@ -35,4 +35,4 @@ func displayAllInventory(items: [String]){
     }
 }
 ```
-This function runs in linear time because the number of items we print out is directly proportional to the number of items we have in our inventory. In other words if we had 100 items, they would get printed out 100 times.
+This function runs in linear time because the number of items we print out is directly proportional to the number of items we have in our inventory. In other words if we had 100 items, they would get printed out 100 times. In Big O Notation we say this function runs in **O(n)** time.
