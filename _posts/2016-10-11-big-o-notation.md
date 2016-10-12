@@ -7,8 +7,8 @@ image2: /assets/article_images/night-track-mobile.JPG
 ---
 
 To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides with a uniform method of comparing the efficiency.  For example, your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5 because the iPhone 7 plus has better specs.  This does not provide a helpful benchmark because it's a given that performance will be better on a newer phone. In order to judge the performance of your algorithms we need to take a look how long they run:
-1. Relative to size of the input
-2. As the input becomes arbitrarily large
+* Relative to size of the input
+* As the input becomes arbitrarily large
 
 Every time you use this notation you literally write a capital O, parenthesis, and some algebraic expression in the parenthesis.  The algebraic expression is always going to be mathematical function of the variable *n*.  Where, *n* represents the length of an input into your function.
 
@@ -26,6 +26,7 @@ func displayFirstInventoryItem(items: [String]) {
 This function runs in constant time relative to its input because we are always accessing the first item of the array.  The array could have 3 items or 300,000 items and it wouldn't change the time necessary to return the first item.  In Big O Notation we say this function runs in **O(1)** time.
 
 #Example 2
+
 ```
 var inventory = ["iPhone 7", "Macbook Pro", "Mac Pro"]
 
