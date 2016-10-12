@@ -14,5 +14,25 @@ Every time you use this notation you literally write a capital O, parenthesis, a
 
 Let's take a look at some examples to make this concept seem less foreign.
 
+#Example 1
 
+```
+var inventory = ["iPhone 7", "Macbook Pro", "Mac Pro"]
 
+func displayFirstInventoryItem(items: [String]) {
+    print(items[0])
+}
+```
+This function runs in constant time relative to its input because we are always accessing the first item of the array.  The array could have 3 items or 300,000 items and it wouldn't change the time necessary to return the first item.  In Big O Notation we say this function runs in **O(1)** time.
+
+#Example 2
+```
+var inventory = ["iPhone 7", "Macbook Pro", "Mac Pro"]
+
+func displayAllInventory(items: [String]){
+    for inventoryItem in items {
+        print(inventoryItem)
+    }
+}
+```
+This function runs in linear time because the number of items we print out is directly proportional to the number of items we have in our inventory. In other words if we had 100 items, they would get printed out 100 times.
