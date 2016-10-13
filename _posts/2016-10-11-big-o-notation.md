@@ -59,7 +59,7 @@ This function runs in **O(n^2)** time. The outer loop runs n times and the inner
 
 
 # Comparing Efficiencies
-Imagine you're trying to find the smallest in-app purchase you've made.  How would you go about doing this?  Let's take a look at two different approaches and compare them. If our inventory list had 100 items then our function would have to print 10,000 times.
+Imagine you're trying to find the smallest in-app purchase you've recieved from a customer.  How would you go about doing this?  Let's take a look at two different approaches and compare them. If our inventory list had 100 items then our function would have to print 10,000 times.
 
 O(n^2)
 ```
