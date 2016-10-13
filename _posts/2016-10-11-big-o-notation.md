@@ -93,4 +93,4 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
 | O(n log n)    | Log Linear    |
 | O(n^2)        | Quadratic     |
 | O(n^3)        | Cubic         |
-| O(2n^x)        | Exponential   |
+| O(2^n)        | Exponential   |
