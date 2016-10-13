@@ -6,9 +6,11 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Writing_on_the_
 image2: /assets/article_images/night-track-mobile.JPG
 ---
 
-To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides with a uniform method of comparing the efficiency.  For example, your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5 because the iPhone 7 plus has better specs.  This does not provide a helpful benchmark because it's a given that performance will be better on a newer phone. In order to judge the performance of your algorithms we need to take a look how long they run:
-* Relative to size of the input
-* As the input becomes arbitrarily large
+To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides with a uniform way of comparing efficiencies.  For example, your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5.  This does not provide a helpful benchmark because it's a given that performance will be better on a newer phone with better specs. In order to judge the performance of your algorithms we need to take a look how long they run:
+
+
+-Relative to size of the input
+-As the input becomes arbitrarily large
 
 Every time you use this notation you literally write a capital O, parenthesis, and some algebraic expression in the parenthesis.  The algebraic expression is always going to be mathematical function of the variable *n*.  Where, *n* represents the length of an input into your function.
 
@@ -37,3 +39,12 @@ func displayAllInventory(items: [String]){
 }
 ```
 This function runs in linear time because the number of items we print out is directly proportional to the number of items we have in our inventory. In other words if we had 100 items, they would get printed out 100 times. In Big O Notation we say this function runs in **O(n)** time.
+
+#Example 3
+
+```
+
+```
+
+
+#Comparing Efficiencies
