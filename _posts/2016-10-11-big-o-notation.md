@@ -43,6 +43,8 @@ This function runs in linear time because the number of items we print out is di
 # Example 3
 
 ```
+var inventory = ["iPhone 7", "Macbook Pro", "Mac Pro"]
+
 func displayAllPairsOfInventory(items: [String]) {
     var counter = 0
     for inventoryItemOne in items {
@@ -53,11 +55,11 @@ func displayAllPairsOfInventory(items: [String]) {
     }
 }
 ```
-This function runs in **O(n^2)** time. The outer loop runs n times and the inner loop runs n times for each iteration of the outer loop, giving us n^2.
+This function runs in **O(n^2)** time. The outer loop runs n times and the inner loop runs n times for each iteration of the outer loop.
 
 
 # Comparing Efficiencies
-Imagine you're trying to find the smallest in-app purchase you've made.  How would you go about doing this?  Let's take a look at two different approaches and compare them.
+Imagine you're trying to find the smallest in-app purchase you've made.  How would you go about doing this?  Let's take a look at two different approaches and compare them. If our inventory list had 100 items then our function would have to print 10,000 times.
 
 O(n^2)
 ```
