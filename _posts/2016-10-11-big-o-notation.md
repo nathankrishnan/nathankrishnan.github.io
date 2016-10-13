@@ -43,7 +43,7 @@ This function runs in linear time because the number of items we print out is di
 # Example 3
 
 ```
-
+Coming soon!
 ```
 
 
@@ -83,3 +83,14 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
     return minNumber
 }
 ```
+# Common orders of magnitude
+
+| f(n)          | Name          | 
+| ------------- |---------------|
+| O(1)          | Constant      |
+| O(log n)      | Logarithmic   |  
+| O(n)          | Linear        |
+| O(n log n)    | Log Linear    |
+| O(n^2)        | Quadratic     |
+| O(n^3)        | Cubic         |
+| O(n^x)        | Exponential   |
