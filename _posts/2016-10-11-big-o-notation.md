@@ -43,8 +43,17 @@ This function runs in linear time because the number of items we print out is di
 # Example 3
 
 ```
-Coming soon!
+func displayAllPairsOfInventory(items: [String]) {
+    var counter = 0
+    for inventoryItemOne in items {
+        for inventoryItemTwo in items {
+            counter += 1
+            print("Pair \(counter): \(inventoryItemOne), \(inventoryItemTwo)")
+        }
+    }
+}
 ```
+This function runs in **O(n^2)** time. The outer loop runs n times and the inner loop runs n times for each iteration of the outer loop, giving us n^2.
 
 
 # Comparing Efficiencies
