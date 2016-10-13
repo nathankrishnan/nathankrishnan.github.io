@@ -18,7 +18,7 @@ Let's take a look at some examples to make this concept seem less foreign.
 
 # Example 1
 
-```bash
+```
 var inventory = ["iPhone 7", "Macbook Pro", "Mac Pro"]
 
 func displayFirstInventoryItem(items: [String]) {
@@ -48,3 +48,38 @@ This function runs in linear time because the number of items we print out is di
 
 
 # Comparing Efficiencies
+Imagine you're trying to find the smallest in-app purchase you've made.  How would you go about doing this?  Let's take a look at two different approaches and compare them.
+
+O(n^2)
+```
+var inAppPurchases = [11, 7, 5, 2, 9]
+
+func findMinPurchase(list: [Int]) -> Int{
+    var minNumber: Int = list[0]
+    for i in inAppPurchases {
+        var isMin = true
+        for j in inAppPurchases {
+            if i > j {
+                isMin = false
+            }
+        }
+        if isMin == true {
+            minNumber = i
+        }
+    }
+    return minNumber
+}
+```
+
+O(n)
+```
+func moreEfficientFindMinPurchase(list: [Int]) -> Int {
+    var minNumber = list[0]
+    for i in inAppPurchases {
+        if i < minNumber {
+            minNumber = i
+        }
+    }
+    return minNumber
+}
+```
