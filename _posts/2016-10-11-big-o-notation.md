@@ -3,6 +3,7 @@ layout: post
 title:  "Big O Notation"
 categories: markdown
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Writing_on_the_whiteboard.jpg/1280px-Writing_on_the_whiteboard.jpg
+image2: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Writing_on_the_whiteboard.jpg/1280px-Writing_on_the_whiteboard.jpg
 ---
 
 To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides with a uniform way of comparing efficiencies.  For example, the code in your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5.  This does not provide a helpful benchmark because it's a given that performance will be better on a newer phone with better specs. In order to judge the performance of your algorithms we need to take a look how long they run:
@@ -82,6 +83,7 @@ func findMinPurchase(list: [Int]) -> Int{
 }
 ```
 
+
 O(n)
 
 ```
@@ -94,13 +96,6 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
     }
     return minNumber
 }
-```
-
-Testing python code formatting:
-
-```python
-def hello():
-  print("Hello World")
 ```
 
 # Common orders of magnitude
