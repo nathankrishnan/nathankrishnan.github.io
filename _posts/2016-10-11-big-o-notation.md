@@ -96,6 +96,13 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
 }
 ```
 
+Testing python code formatting:
+
+```python
+def hello():
+  print("Hello World")
+```
+
 # Common orders of magnitude
 
 
