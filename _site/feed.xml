@@ -4,63 +4,149 @@
     <title>Nathan Krishnan</title>
     <description>I work with tech startups by day and write code by night.
 </description>
-    <link>http://nathankrishnan.github.io/</link>
-    <atom:link href="http://nathankrishnan.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 Apr 2016 02:09:31 -0400</pubDate>
-    <lastBuildDate>Thu, 07 Apr 2016 02:09:31 -0400</lastBuildDate>
+    <link>http://nathankrishnan.com/</link>
+    <atom:link href="http://nathankrishnan.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 13 Oct 2016 22:12:54 -0400</pubDate>
+    <lastBuildDate>Thu, 13 Oct 2016 22:12:54 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Testing Markdown</title>
-        <description>&lt;h1 id=&quot;mediator-formats-and-css-features&quot;&gt;Mediator Formats and CSS features&lt;/h1&gt;
+        <title>Big O Notation</title>
+        <description>&lt;p&gt;To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides with a uniform way of comparing efficiencies.  For example, the code in your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5.  This does not provide a helpful benchmark because it’s a given that performance will be better on a newer phone with better specs. In order to judge the performance of your algorithms we need to take a look how long they run:&lt;/p&gt;
 
-&lt;h1 id=&quot;examples-for-different-formats-and-css-features&quot;&gt;Examples for different formats and css features&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://airpair-blog.s3.amazonaws.com/wp-content/uploads/2014/07/swift.png&quot; alt=&quot;Swift&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;header-formats&quot;&gt;Header Formats&lt;/h1&gt;
-&lt;p&gt;#Header1
-##Header2&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-
-  &lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
-&lt;p&gt;##orderd lists
-1. one
-2. two
-3. three&lt;/p&gt;
-
-&lt;h2 id=&quot;unorderd-lists&quot;&gt;unorderd lists&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Apple&lt;/li&gt;
-  &lt;li&gt;Banana&lt;/li&gt;
-  &lt;li&gt;Plum&lt;/li&gt;
+  &lt;li&gt;Relative to size of the input&lt;/li&gt;
+  &lt;li&gt;As the input becomes arbitrarily large&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
-&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;example link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Every time you use this notation you literally write a capital O, parenthesis, and some algebraic expression in the parenthesis.  The algebraic expression is always going to be mathematical function of the variable &lt;em&gt;n&lt;/em&gt;.  Where, &lt;em&gt;n&lt;/em&gt; represents the length of an input into your function.&lt;/p&gt;
 
-&lt;h1 id=&quot;combinations&quot;&gt;Combinations&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
+&lt;p&gt;Let’s take a look at some examples to make this concept seem less foreign.&lt;/p&gt;
 
-  &lt;ul&gt;
-    &lt;li&gt;Apple&lt;/li&gt;
-    &lt;li&gt;Banana&lt;/li&gt;
-    &lt;li&gt;Plum&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;h1 id=&quot;example-1&quot;&gt;Example 1&lt;/h1&gt;
+
+&lt;p&gt;```
+var inventory = [“iPhone 7”, “Macbook Pro”, “Mac Pro”]&lt;/p&gt;
+
+&lt;p&gt;func displayFirstInventoryItem(items: [String]) {
+    print(items[0])
+}
+```
+This function runs in constant time relative to its input because we are always accessing the first item of the array.  The array could have 3 items or 300,000 items and it wouldn’t change the time necessary to return the first item.  In Big O Notation we say this function runs in &lt;strong&gt;O(1)&lt;/strong&gt; time.&lt;/p&gt;
+
+&lt;h1 id=&quot;example-2&quot;&gt;Example 2&lt;/h1&gt;
+
+&lt;p&gt;```
+var inventory = [“iPhone 7”, “Macbook Pro”, “Mac Pro”]&lt;/p&gt;
+
+&lt;p&gt;func displayAllInventory(items: [String]){
+    for inventoryItem in items {
+        print(inventoryItem)
+    }
+}
+```
+This function runs in linear time because the number of items we print out is directly proportional to the number of items we have in our inventory. In other words if we had 100 items, they would get printed out 100 times. In Big O Notation we say this function runs in &lt;strong&gt;O(n)&lt;/strong&gt; time.&lt;/p&gt;
+
+&lt;h1 id=&quot;example-3&quot;&gt;Example 3&lt;/h1&gt;
+
+&lt;p&gt;```
+var inventory = [“iPhone 7”, “Macbook Pro”, “Mac Pro”]&lt;/p&gt;
+
+&lt;p&gt;func displayAllPairsOfInventory(items: [String]) {
+    var counter = 0
+    for inventoryItemOne in items {
+        for inventoryItemTwo in items {
+            counter += 1
+            print(“Pair (counter): (inventoryItemOne), (inventoryItemTwo)”)
+        }
+    }
+}
+```
+This function runs in &lt;strong&gt;O(n^2)&lt;/strong&gt; time. The outer loop runs n times and the inner loop runs n times for each iteration of the outer loop.&lt;/p&gt;
+
+&lt;h1 id=&quot;comparing-efficiencies&quot;&gt;Comparing Efficiencies&lt;/h1&gt;
+&lt;p&gt;Imagine you’re trying to find the smallest in-app purchase you’ve recieved from a customer.  How would you go about doing this?  Let’s take a look at two different approaches and compare them. If our inventory list had 100 items then our function would have to print 10,000 times.&lt;/p&gt;
+
+&lt;p&gt;O(n^2)&lt;/p&gt;
+
+&lt;p&gt;```
+var inAppPurchases = [11, 7, 5, 2, 9]&lt;/p&gt;
+
+&lt;p&gt;func findMinPurchase(list: [Int]) -&amp;gt; Int{
+    var minNumber: Int = list[0]
+    for i in inAppPurchases {
+        var isMin = true
+        for j in inAppPurchases {
+            if i &amp;gt; j {
+                isMin = false
+            }
+        }
+        if isMin == true {
+            minNumber = i
+        }
+    }
+    return minNumber
+}
+```&lt;/p&gt;
+
+&lt;p&gt;O(n)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+func moreEfficientFindMinPurchase(list: [Int]) -&amp;gt; Int {
+    var minNumber = list[0]
+    for i in inAppPurchases {
+        if i &amp;lt; minNumber {
+            minNumber = i
+        }
+    }
+    return minNumber
+}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;common-orders-of-magnitude&quot;&gt;Common orders of magnitude&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;f(n)&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;Constant&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;Logarithmic&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+      &lt;td&gt;Linear&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(n log n)&lt;/td&gt;
+      &lt;td&gt;Log Linear&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(n^2)&lt;/td&gt;
+      &lt;td&gt;Quadratic&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(n^3)&lt;/td&gt;
+      &lt;td&gt;Cubic&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;O(2^n)&lt;/td&gt;
+      &lt;td&gt;Exponential&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </description>
-        <pubDate>Sun, 03 Apr 2016 00:00:00 -0400</pubDate>
-        <link>http://nathankrishnan.github.io/markdown/2016/04/03/hello.html</link>
-        <guid isPermaLink="true">http://nathankrishnan.github.io/markdown/2016/04/03/hello.html</guid>
+        <pubDate>Tue, 11 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://nathankrishnan.com/markdown/2016/10/11/big-o-notation.html</link>
+        <guid isPermaLink="true">http://nathankrishnan.com/markdown/2016/10/11/big-o-notation.html</guid>
         
         
         <category>markdown</category>
@@ -68,56 +154,25 @@ id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Turn down for whaat</title>
-        <description>&lt;h1 id=&quot;what&quot;&gt;what&lt;/h1&gt;
+        <title>Algorithms and Data Structures in Swift</title>
+        <description>&lt;p&gt;So you’ve read Apple’s Swift language docs, experimented in bunch of Swift Playgrounds, and have sucessfully built some small iOS apps…what’s the next?  In the forthcoming series of posts I intend to answer this question by teaching the basic concepts of algorithms and data structures, using examples written in Swift. After you’ve gotten a good feel of the language and the basics of iOS app development, it’s important to focus on writing more efficient code.  To be clear, when I use the word &lt;em&gt;‘efficient’&lt;/em&gt; I’m talking about how your how well your iOS app is using its host device’s resources to get a particular job done.  You can think about this in terms of space and time, i.e. how much storage space on disk do you need and how long does your code take to run?&lt;/p&gt;
 
-&lt;h1 id=&quot;examples-for-different-formats-and-css-features&quot;&gt;Examples for different formats and css features&lt;/h1&gt;
+&lt;p&gt;Think about efficiency in terms of painting your room:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://airpair-blog.s3.amazonaws.com/wp-content/uploads/2014/07/swift.png&quot; alt=&quot;Swift&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/nathankrishnan/nathankrishnan.github.io/master/assets/article_images/brush_vs.png&quot; alt=&quot;Paint Brush vs Roller Brush&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;header-formats&quot;&gt;Header Formats&lt;/h1&gt;
-&lt;p&gt;#Header1
-##Header2&lt;/p&gt;
+&lt;p&gt;You could take a slow methodical approach (i.e. using your paint brush), but there is often a faster method that accomplishes the same goal by reducing repetition.  &lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;p&gt;We can describe the efficiency of code using something called Big O Notation.  Every time you use this notation you literally write a capital O, parenthesis, and some algebraic expression in the parenthesis.  The algebraic expression is always going to be a mathematical function of the variable &lt;em&gt;n&lt;/em&gt;, where &lt;em&gt;n&lt;/em&gt; represents the length of an input into your function. &lt;/p&gt;
 
-  &lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://i1.wp.com/texblog.org/Wordpress/wp-content/uploads/2014/06/big-o-example-latex.png&quot; alt=&quot;An example of Big O Notation&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;lists&quot;&gt;Lists&lt;/h1&gt;
-&lt;p&gt;##orderd lists
-1. one
-2. two
-3. three&lt;/p&gt;
+&lt;p&gt;In a technical interview you will be expected to describe the efficiency of your solution.  Fortunately, Big O Notation provides us with the means of articulating it. In the next blog post, I’ll go into more depth about Big O Notation and make this concept seem less foriegn!&lt;/p&gt;
 
-&lt;h2 id=&quot;unorderd-lists&quot;&gt;unorderd lists&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Apple&lt;/li&gt;
-  &lt;li&gt;Banana&lt;/li&gt;
-  &lt;li&gt;Plum&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
-&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;example link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;combinations&quot;&gt;Combinations&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus&lt;/p&gt;
-
-  &lt;ul&gt;
-    &lt;li&gt;Apple&lt;/li&gt;
-    &lt;li&gt;Banana&lt;/li&gt;
-    &lt;li&gt;Plum&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
 </description>
-        <pubDate>Tue, 05 May 2015 00:00:00 -0400</pubDate>
-        <link>http://nathankrishnan.github.io/markdown/2015/05/05/what.html</link>
-        <guid isPermaLink="true">http://nathankrishnan.github.io/markdown/2015/05/05/what.html</guid>
+        <pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://nathankrishnan.com/markdown/2016/10/10/start.html</link>
+        <guid isPermaLink="true">http://nathankrishnan.com/markdown/2016/10/10/start.html</guid>
         
         
         <category>markdown</category>

@@ -61,6 +61,7 @@ This function runs in **O(n^2)** time. The outer loop runs n times and the inner
 Imagine you're trying to find the smallest in-app purchase you've recieved from a customer.  How would you go about doing this?  Let's take a look at two different approaches and compare them. If our inventory list had 100 items then our function would have to print 10,000 times.
 
 O(n^2)
+
 ```
 var inAppPurchases = [11, 7, 5, 2, 9]
 
@@ -82,6 +83,7 @@ func findMinPurchase(list: [Int]) -> Int{
 ```
 
 O(n)
+
 ```
 func moreEfficientFindMinPurchase(list: [Int]) -> Int {
     var minNumber = list[0]
@@ -93,9 +95,11 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
     return minNumber
 }
 ```
+
 # Common orders of magnitude
 
-| f(n)          | Name          | 
+
+| f(n)          | Name          |
 | ------------- |---------------|
 | O(1)          | Constant      |
 | O(log n)      | Logarithmic   |  
