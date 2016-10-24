@@ -105,7 +105,6 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
 
 # Common orders of magnitude
 
-For your r
 
 | f(n)          | Name          |
 | ------------- |---------------|
