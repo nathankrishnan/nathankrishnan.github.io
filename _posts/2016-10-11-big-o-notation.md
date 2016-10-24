@@ -85,7 +85,7 @@ func findMinPurchase(list: [Int]) -> Int{
     return minNumber
 }
 ```
-## The More Thoughtful Approach
+## A More Thoughtful Approach
 
 Instead of having to dive into nested loops you could select the first item in the list and iterate through the list to see if the selected item is still the smallest number.  If we come across a number that is smaller than our arbitrarily selected one, we can reclaim it as the smaller number.
 
