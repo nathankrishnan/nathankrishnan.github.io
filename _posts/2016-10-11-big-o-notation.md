@@ -59,9 +59,12 @@ This function runs in **O(n^2)** time. The outer loop runs n times and the inner
 
 
 # Comparing Efficiencies
-Imagine you're trying to find the smallest in-app purchase you've recieved from a customer.  How would you go about doing this?  Let's take a look at two different approaches and compare them. If our inventory list had 100 items then our function would have to print 10,000 times.
+Imagine you're trying to find the smallest in-app purchase you've recieved from a customer.  How would you go about doing this?  Let's take a look at two different approaches and compare them. 
 
-O(n^2)
+## The Brute Force Approach
+Perhaps the first thing to cross your mind would be to compare a each item to every item in the list.  This works, but it's not a very efficient approach. If our inventory list had 100 items then our function would have to print 10,000 times.
+
+This solution runs in **O(n^2)** time.
 
 ```
 var inAppPurchases = [11, 7, 5, 2, 9]
@@ -82,9 +85,12 @@ func findMinPurchase(list: [Int]) -> Int{
     return minNumber
 }
 ```
+## The More Thoughtful Approach
+
+Instead of having to dive into nested iterations you could 
 
 
-O(n)
+This solution runs in ***O(n)** time.
 
 ```
 func moreEfficientFindMinPurchase(list: [Int]) -> Int {
@@ -100,6 +106,7 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
 
 # Common orders of magnitude
 
+For your r
 
 | f(n)          | Name          |
 | ------------- |---------------|
