@@ -90,7 +90,7 @@ func findMinPurchase(list: [Int]) -> Int{
 Instead of having to dive into nested iterations you could 
 
 
-This solution runs in ***O(n)** time.
+This solution runs in **O(n)** time.
 
 ```
 func moreEfficientFindMinPurchase(list: [Int]) -> Int {
