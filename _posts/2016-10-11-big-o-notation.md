@@ -61,7 +61,7 @@ This function runs in **O(n^2)** time. The outer loop runs n times and the inner
 # Comparing Efficiencies
 Imagine you're trying to find the smallest in-app purchase you've recieved from a customer.  How would you go about doing this?  Let's take a look at two different approaches and compare them. 
 
-## The Brute Force Approach
+### The Brute Force Approach
 Perhaps the first thing to cross your mind would be to compare a each item to every item in the list.  This works, but it's not a very efficient approach. If our inventory list had 100 items then our function would have to print 10,000 times.
 
 This solution runs in **O(n^2)** time.
@@ -85,7 +85,8 @@ func findMinPurchase(list: [Int]) -> Int{
     return minNumber
 }
 ```
-## A More Thoughtful Approach
+
+### A More Thoughtful Approach
 
 Instead of having to dive into nested loops you could select the first item in the list and iterate through the list to see if the selected item is still the smallest number.  If we come across a number that is smaller than our arbitrarily selected one, we can reclaim it as the smaller number.
 
