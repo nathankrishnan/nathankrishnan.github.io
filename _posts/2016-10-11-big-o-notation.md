@@ -12,7 +12,7 @@ To describe how long an algorithm takes to run we use something called Big O Not
 - Relative to size of the input
 - As the input becomes arbitrarily large
 
-Every time you use this notation you literally write a capital O, parenthesis, and some algebraic expression in the parenthesis.  The algebraic expression is always going to be mathematical function of the variable *n*.  Where, *n* represents the length of an input into your function.
+Every time you use this notation you literally write a capital O, parenthesis, and some algebraic expression in the parenthesis.  The algebraic expression is always going to be a mathematical function of the variable *n*.  Where, *n* represents the length of an input into your function.
 
 Let's take a look at some examples to make this concept seem less foreign.
 
