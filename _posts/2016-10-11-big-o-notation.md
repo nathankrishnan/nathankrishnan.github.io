@@ -6,7 +6,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Writing_on_the_
 image2: https://static.pexels.com/photos/7067/notes-clean-hero-minimal.jpg
 ---
 
-To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides with a uniform way of comparing efficiencies.  For example, the code in your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5.  This does not provide a helpful benchmark because it's a given that performance will be better on a newer phone with better specs. In order to judge the performance of your algorithms we need to take a look how long they run:
+To describe how long an algorithm takes to run we use something called Big O Notation. Since hardware and software runtime environments  can vary widely, Big O Notation provides us with a uniform way of comparing efficiencies.  For example, the code in your iOS app will definitely run faster on an iPhone 7 Plus than an iPhone 5.  This does not provide a helpful benchmark because it's a given that performance will be better on a newer phone with better specs. In order to judge the performance of your algorithms we need to take a look how long they run:
 
 
 - Relative to size of the input
