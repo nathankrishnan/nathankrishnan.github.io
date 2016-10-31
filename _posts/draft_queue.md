@@ -1,0 +1,1 @@
+A queue is an ordered collection of items where new items are added to the end and the removal of existing items happens at the front.  We've all experienced queues before, whether it is waiting in line to purchase a movie ticket or waiting in line to checkout your groceries.  This ordering principle is called first-in first-out, or FIFO.
