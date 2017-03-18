@@ -39,6 +39,8 @@ Let's walkthrough the steps of inserting an item and querying to check the prese
 [0, 0, 0, 1, 0, 0]
 ```
 
-Now we need to pass our string through the second hash function.  Let's say the output of this is the value: 1967507331.
-
+Now we need to pass our string through the second hash function.  Let's say the output of this is the value: 1164682772.  If we continue following the steps, ```1164682772 % 6 = 2```.  We will now set the value of the bit at index 2 to ```1```.  Our Bloom filter now looks like:
+```
+[0, 0, 1, 1, 0, 0]
+```
 
