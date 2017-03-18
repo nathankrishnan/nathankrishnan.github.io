@@ -106,6 +106,7 @@ func moreEfficientFindMinPurchase(list: [Int]) -> Int {
 
 # Common orders of magnitude
 
+Here are the order of magnitudes you will come across, listed in ascending order from most efficient to least efficient:
 
 | f(n)          | Name          |
 | ------------- |---------------|
