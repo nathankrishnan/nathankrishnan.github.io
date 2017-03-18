@@ -44,3 +44,4 @@ Now we need to pass our string through the second hash function.  Let's say the 
 [0, 0, 1, 1, 0, 0]
 ```
 
+These two bit values indicate to the Bloom filter that you've inserted the string *"virus.io"*. To recap: instead of storing the actual string value we can run the string through several hash functions to give us a unique signature, which we can then map to a position in the array.
