@@ -34,18 +34,18 @@ Instead of inserting the value of an item into the array, we can just set some o
 
 Querying a Bloom filter will either return ```false```, meaning that the item is ***not*** in the set, or ```true```, meaning that the item ***might*** be in the set. In other words, if the Bloom filter returns ```false``` you're guaranteed that the item isn't in the set.  If it returns ```true```, there is a chance it could be false positive.
 
-Let's walkthrough the steps of inserting an item and querying to check the presence of an item to solidify these concepts. For this example, we will work with a Bloom filter with a fixed-length size of 6 bits.  If we wanted to insert the string *"virus.io"* we would send it through our first hash function.  Let's say the output of this is the value: 1967507331.  We would then perform ```(value) moduluo (size of array)``` to get the index of which bit to set the value to 1. In our case ```1967507331 % 6 = 3```.  We will now set the value of the bit at index 3 to ```1```.  Our Bloom filter now looks like:
+Let's walkthrough the steps of inserting an item and querying to check the presence of an item to solidify these concepts. For this example, we will work with a Bloom filter with a fixed-length size of 6 bits.  If we wanted to insert the string *"virus.io"* we would send it through our first hash function.  Let's say the output of this is: 1967507331.  We would then perform ```(value) moduluo (size of array)``` to get the index of which bit to set the value to 1. In our case ```1967507331 % 6 = 3```.  We will now set the value of the bit at index 3 to ```1```.  Our Bloom filter now looks like:
 ```
 [0, 0, 0, 1, 0, 0]
 ```
-Now we need to pass our string through the second hash function.  Let's say the output of this is the value: 1164682772.  If we continue following the steps, ```1164682772 % 6 = 2```.  We will now set the value of the bit at index 2 to ```1```.  Our Bloom filter now looks like:
+Now we need to pass our string through the second hash function.  Let's say the output of this is: 1164682772.  If we continue following the steps, ```1164682772 % 6 = 2```.  We will now set the value of the bit at index 2 to ```1```.  Our Bloom filter now looks like:
 ```
 [0, 0, 1, 1, 0, 0]
 ```
 These two bit values indicate to the Bloom filter that you've inserted the string *"virus.io"*. To recap: instead of storing the actual string value we can run the string through several hash functions to give us a unique signature, which we can then map to a position in the array.
 
 # Implementation in Swift
-When implementing a Bloom filter in Swift, we can represent ```0``` or ```1``` as the boolean values of ```false``` or ```true```.  Why would we do this?  Well in Swift boolean values take less memory to represent than integer values.  There is a handy enum in Swift 3 called ```MemoryLayout<T>``` that we can use to verify the aforementioned claim.  Take a look at the output below:
+When implementing a Bloom filter in Swift, we can represent ```0``` or ```1``` with the boolean values of ```false``` or ```true```.  Why would we do this?  Well in Swift boolean values take less memory to represent than integer values.  There is a handy enum in Swift 3 called ```MemoryLayout<T>``` that we can use to verify the aforementioned claim.  Take a look at the output below:
 ```swift
 print(MemoryLayout<Bool>.size)
 // A Bool is represented with 1 byte
