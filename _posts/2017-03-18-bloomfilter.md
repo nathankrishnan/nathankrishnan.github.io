@@ -48,7 +48,7 @@ Now we need to pass our string through the second hash function.  Let's say the 
 These two bit values indicate to the Bloom filter that you've inserted the string *"virus.io"*. To recap: instead of storing the actual string value we can run the string through several hash functions to give us a unique signature, which we can then map to a position in the array.
 
 # Implementation in Swift
-When implementing a Bloom filter in Swift, we represent the ```0``` or ```1``` as the boolean values of ```false``` or ```true```.  Why would we do this?  Well in Swift boolean values use less memory to represent than integer values.  There is a handy enum in Swift 3 called ```MemoryLayout<T>``` that we can use to verify the aforementioned claim.  Take a look at the output below:
+When implementing a Bloom filter in Swift, we can represent ```0``` or ```1``` as the boolean values of ```false``` or ```true```.  Why would we do this?  Well in Swift boolean values take less memory to represent than integer values.  There is a handy enum in Swift 3 called ```MemoryLayout<T>``` that we can use to verify the aforementioned claim.  Take a look at the output below:
 ```swift
 print(MemoryLayout<Bool>.size)
 // A Bool is represented with 1 byte
