@@ -5,4 +5,5 @@ categories: algorithms
 image: https://static.pexels.com/photos/29781/pexels-photo-29781.jpg
 ---
 
-Test
+
+In this series of blog posts I will showcase an algorithm from the [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club) and highlight how it could be applied in the context of iOS app development.
