@@ -6,8 +6,6 @@ image: https://static.pexels.com/photos/29781/pexels-photo-29781.jpg
 ---
 
 
-In this series of blog posts I will showcase an algorithm or data structure from the [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club) and highlight how it could be applied.  Without further ado, I'd like to introduce you to the concept of a [Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter) by first describing the problem it solves.
-
 Imagine that in your iOS app you have a UIWebView that loads an arbitrary URL.  There are plenty of malicious sites on the web and we should certainly take actions to prevent or warn our users if they attempt to access a nefarious site.  This begs the question: what's an efficient way of checking if the domain in a URL is known to be a malicious site? Perhaps as a first pass at the problem, you would find a dossier of malicious domains, store the dossier in a set, and check to see if the domain in the arbitrary URL exists in the set.
 
 ```swift
@@ -23,7 +21,7 @@ if let validDomain = websiteToLoad?.host {
 }
 ```
 
-The problem with this approach is that a large dossier will consume a significant amount of memory.  Likewise, as your dossier grows, so will its memory footprint because you are storing each domain name as a string.  Is there a more efficient approach to maintain a dossier data list without consuming too much memory?  Yes we can instead use a Bloom filter, which is a space-efficient and probabilistic data structure.  
+The problem with this approach is that as your dossier grows, so will its memory footprint because you are storing each domain name as a string.  In other words, a large dossier will consume a significant amount of memory. Is there a more efficient approach to maintain a dossier data list without consuming too much memory?  Yes, we can instead use a Bloom filter, which is a space-efficient and probabilistic data structure.  
 
 # The basic concept
 A Bloom filter can be conceptually thought of as a fixed-length array of bits. 
@@ -45,8 +43,10 @@ Now we need to pass our string through the second hash function.  Let's say the 
 ```
 These two bit values indicate to the Bloom filter that you've inserted the string *"virus.io"*. To recap: instead of storing the actual string value we can run the string through several hash functions to give us a unique signature, which we can then map to a position in the array.
 
-# Querying to find an item
-[under construction...]
+# Checking the existence an item
+To check to see if an item exists, you send the input through the hash functions, which will return array indices.  You then check the value at each array index. If all of the values are ```1``` then the check will return ```true```.  If any, or all, of the values are ```0``` then the check will return ```false```.
+
+**NOTE**: As mentioned earlier, there is a chance that a false positive could occur.  To be more specific, this occurs when the hash values of different input items are mapped to the same indices of the array.  This can be remedied by having a bit of a bigger size or by adding more hash functions that the Bloom filter can use.  Adding extraneous hash functions will 
 
 # Implementation in Swift
 When implementing a Bloom filter in Swift, we can represent ```0``` or ```1``` with the boolean values of ```false``` or ```true```.  Why would we do this?  Well in Swift boolean values take less memory to represent than integer values.  There is a handy enum in Swift 3 called ```MemoryLayout<T>``` that we can use to verify the aforementioned claim.  Take a look at the output below:
