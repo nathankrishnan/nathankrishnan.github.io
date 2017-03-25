@@ -121,7 +121,7 @@ private func computeHashes(_ value: T) -> [Int] {
 }
 ```
 
-```map()``` will return an array with the integer values.  I plan on writing a blog post on ```map()``` and other *higher order functions* that you can perform on arrays in Swift.
+```map()``` will return an array with the integer values.  I plan on writing a blog post on ```map()``` and other *higher order functions* that you can perform on arrays in Swift in the future.
 
 
 
