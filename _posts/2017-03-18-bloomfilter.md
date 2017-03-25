@@ -133,7 +133,7 @@ private func computeHashes(_ value: T) -> [Int] {
 }
 ```
 
-**NOTE**: Taking the absolute value of the result of performing the hash function on a value is preventative measure just in case the result is a negative value.
+**NOTE**: Taking the absolute value of the result of performing the hash function on a value is a preventative measure just in case the result is a negative value.
 
 
 
