@@ -62,3 +62,45 @@ print(MemoryLayout<Int>.size)
 
 Jamil Dhanani and Matthijs Hollemans from the [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Bloom%20Filter) have created an implementation of a Bloom filter in Swift that I will use as the basis for explanation. Here is the scaffold of the Bloom filter class:
 
+```swift
+public class BloomFilter<T> {
+    private var array: [Bool]
+    private var hashFunctions: [(T) -> Int]
+    
+    public init(size: Int = 1024, hashFunctions: [(T) -> Int]) {
+        self.array = [Bool](repeating: false, count: size)
+        self.hashFunctions = hashFunctions
+    }
+    
+    private func computeHashes() {
+    }
+    
+    public func insert(_ element: T) {
+    }
+    
+    public func query(_ value: T) {
+    }
+    
+    public func isEmpty() {
+    }
+}
+```
+
+In the upcoming sections we will explore the inner workings of each function.  The Bloom filter class is of a generic type.  It has two stored properties:
+- An array of type ```Bool``` 
+- An array to store the hash functions that we'll use
+
+The first array will be initialized to a fixed size.  If you're unfamiliar with the syntactic sugar, you can initialize an array to repeat a value for a given number of times.  For example: 
+
+```swift 
+[Int](repeating: 7, count: 3)
+```  
+
+Will create an array with three 7's.
+```swift 
+[7, 7, 7]
+```
+
+The second array will store the hashing functions we will use.  
+
+
