@@ -21,7 +21,7 @@ if let validDomain = websiteToLoad?.host {
 }
 ```
 
-The problem with this approach is that as your dossier grows, so will its memory footprint because you are storing each domain name as a string.  In other words, a large dossier will consume a significant amount of memory. Is there a more efficient approach to maintain a dossier data list without consuming too much memory?  Yes, we can instead use a Bloom filter, which is a space-efficient and probabilistic data structure.  
+The problem with this approach is that as your dossier grows, so will its memory footprint because you are storing each domain name as a string.  In other words, a large dossier will consume a significant amount of memory. Is there a more efficient approach to maintain our list of bad domains without consuming too much memory?  Yes, we can instead use a Bloom filter, which is a space-efficient and probabilistic data structure.  
 
 # The basic concept
 A Bloom filter can be conceptually thought of as a fixed-length array of bits. 
