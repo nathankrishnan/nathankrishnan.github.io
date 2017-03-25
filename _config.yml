@@ -37,11 +37,11 @@ disqus: nathank
 # social icons and sharing options
 social:
   - icon:	instagram
-    url:	https://twitter.com/nathankrishnan
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
+    url:	https://www.instagram.com/nathanismyname/
+    desc: Photos I've taken
+    share_url: 
+    share_title: 
+    share_link: 
 
 
   - icon:	github
@@ -50,3 +50,11 @@ social:
     share_url:
     share_title:
     share_link:
+
+# social:
+#  - icon:	twitter
+#    url:	https://twitter.com/nathankrishnan
+#    desc: Follow me on twitter
+#    share_url: http://twitter.com/share
+#    share_title: ?text=
+#    share_link: "&amp;url="
