@@ -48,7 +48,7 @@ These two bit values indicate to the Bloom filter that you've inserted the strin
 # Checking the existence an item
 To check to see if an item exists, you send the input through the hash functions, which will return array indices.  You then check the value at each array index. If all of the values are ```1``` then the check will return ```true```.  If any, or all, of the values are ```0``` then the check will return ```false```.
 
-**NOTE**: As mentioned earlier, there is a chance that a false positive could occur.  To be more specific, this occurs when the hash values of different input items are mapped to the same indices of the array.  This can be remedied by having a large enough array size or by adding more hash functions that the Bloom filter can use.  However, adding extraneous hash functions will slow down performance.  Refer to this [answer on StackOverflow](http://stackoverflow.com/questions/658439/how-many-hash-functions-does-my-bloom-filter-need), which provides a concise explanation of an equation you can use to calculate the number of needed hash functions.
+**NOTE**: As mentioned earlier, there is a chance that a false positive could occur.  To be more specific, this occurs when the hash values of different input items are mapped to the same indices of the array.  This can be remedied by having a large enough array size or by adding more hash functions that the Bloom filter can use.  However, adding extraneous hash functions will slow down performance.  Refer to this [answer on StackOverflow](http://stackoverflow.com/questions/658439/how-many-hash-functions-does-my-bloom-filter-need), which provides a concise explanation of an equation you can use to calculate the number of needed hash functions.  The performance of the Bloom filter will be **O(k)**, where k is the number of hash functions.
 
 # Implementation in Swift
 When implementing a Bloom filter in Swift, we can represent ```0``` or ```1``` with the boolean values of ```false``` or ```true```.  Why would we do this?  Well in Swift boolean values take less memory to represent than integer values.  There is a handy enum in Swift 3 called ```MemoryLayout<T>``` that we can use to verify the aforementioned claim.  Take a look at the output below:
@@ -59,4 +59,6 @@ print(MemoryLayout<Bool>.size)
 print(MemoryLayout<Int>.size)
 // An Int is represented with 8 bytes
 ```
+
+
 
