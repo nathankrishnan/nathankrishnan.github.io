@@ -60,5 +60,5 @@ print(MemoryLayout<Int>.size)
 // An Int is represented with 8 bytes
 ```
 
-
+Jamil Dhanani and Matthijs Hollemans from the [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Bloom%20Filter) have created an implementation of a Bloom filter in Swift that I will use as the basis for explanation. Here is the scaffold of the Bloom filter class:
 
