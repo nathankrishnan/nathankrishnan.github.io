@@ -101,7 +101,7 @@ The second array will store the hashing functions we will use.
 
 ## Computing Hash Values
 
-Both the insert or query operations the need a way to calculate a hash value.  The ```computeHashes()``` function will be a helper function to do this, which is why its marked as private.  This function will iterate over each hash function in the array containing hash functions and apply the function to the input. Then it will perform modulo on this value by the array's size.  This will give us position in our array of Boolean values to change the value to ```true```.  The output of this function will be an array of positions.
+Both the insert and query operations the need a way to calculate a hash value.  The ```computeHashes()``` function will be a helper function to do this, which is why its marked as private.  This function will iterate over each hash function in the array containing hash functions and apply the function to the input. Then it will perform modulo on this value by the array's size.  This will give us position in our array of Boolean values to change the value to ```true```.  The output of this function will be an array of positions.
 
 ```swift
 private func computeHashes(_ value: T) -> [Int] {
