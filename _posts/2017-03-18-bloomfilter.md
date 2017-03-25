@@ -123,7 +123,7 @@ private func computeHashes(_ value: T) -> [Int] {
 ```map()``` will return an array with the integer values that resulted from the operations.  I plan on writing a blog post on ```map()``` and other *higher order functions* that you can perform on arrays in Swift in the future.  For now just know that ```map()``` provides us with a functional alternative to using a ```for``` loop.  For the sake of comparison, this is what the ```computeHashes()``` function would look if we used a ```for``` loop instead:
 
 ```swift
-public func computeHashes(_ value: T) -> [Int] {
+private func computeHashes(_ value: T) -> [Int] {
     var results: [Int] = []
     for hashFunction in hashFunctions {
         let value = abs(hashFunction(value)) % array.count
