@@ -72,17 +72,15 @@ public class BloomFilter<T> {
         self.hashFunctions = hashFunctions
     }
     
-    private func computeHashes() {
+    private func computeHashes(_ value: T) -> [Int] {}
+    
+    public func insert(_ element: T) {}
+    
+    
+    public func query(_ value: T) -> Bool {}
     }
     
-    public func insert(_ element: T) {
-    }
-    
-    public func query(_ value: T) {
-    }
-    
-    public func isEmpty() {
-    }
+    public func isEmpty() {}
 }
 ```
 
@@ -103,4 +101,5 @@ Will create an array with three 7's.
 
 The second array will store the hashing functions we will use.  
 
+## Computing Hash Values
 
