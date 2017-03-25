@@ -76,7 +76,6 @@ public class BloomFilter<T> {
     
     public func insert(_ element: T) {}
     
-    
     public func query(_ value: T) -> Bool {}
     }
     
@@ -102,4 +101,15 @@ Will create an array with three 7's.
 The second array will store the hashing functions we will use.  
 
 ## Computing Hash Values
+
+Both the insert or query operations the need a way to calculate a hash value.  The ```computeHashes()``` function will be a helper function to do this, which is why its marked as private.  This function will iterate over each hash function in the array containing hash functions and apply the function to the input. Then it will perform modulo on this value by the array's size.  This will give us position in our array of Boolean values to change the value to ```true```.  The output of this function will be an array of positions.
+
+```swift
+return hashFunctions.map() { hashFunction in abs(hashFunction(value) % array.count) }
+
+```
+
+For those unfamiliar with the map operation syntax in Swift, here's another way to write out this funciton:
+
+
 
