@@ -135,5 +135,15 @@ private func computeHashes(_ value: T) -> [Int] {
 
 **NOTE**: Taking the absolute value of the result of performing the hash function on a value is a preventative measure just in case the result is a negative value.
 
+## Inserting a value
+Now that we have a handy helper function, we'll invoke it on the value passed in.  This will give us an array of positions we can iterate over.  We'll set the value at the position of our internal array to true.
+
+```swift
+public func insert(_ element: T) {
+  for hashValuePosition in computeHashes(element) {
+    array[hashValuePosition] = true
+  }
+}
+```
 
 
