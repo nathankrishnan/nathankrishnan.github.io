@@ -43,7 +43,7 @@ Now we need to pass our string through the second hash function.  Let's say the 
 ```
 [0, 0, 1, 1, 0, 0]
 ```
-These two bit values indicate to the Bloom filter that you've inserted the string *"virus.io"*. To recap: instead of storing the actual string value we can run the string through several hash functions to give us a unique signature, which we can then map to a position in the array.
+These two bit values indicate to the Bloom filter that you've inserted the string *"virus.io"*. To recap: instead of storing the actual string value we can run the string through several hash functions to give us a unique signature, which we can then map to an index in the array.
 
 # Checking the existence an item
 To check to see if an item exists, you send the input through the hash functions, which will return array indices.  You then check the value at each array index. If all of the values are ```1``` then the check will return ```true```.  If any, or all, of the values are ```0``` then the check will return ```false```.
@@ -101,7 +101,7 @@ The second array will store the hashing functions we will use.
 
 ## Computing Hash Values
 
-Both the insert and query operations the need a way to calculate a hash value.  The ```computeHashes()``` function will be a helper function to do this, which is why its marked as private.  This function will iterate over each hash function in the array containing hash functions and apply the function to the input. Then it will perform modulo on this value by the array's size.  This will give us position in our array of Boolean values to change the value to ```true```.  The output of this function will be an array of positions.
+Both the insert and query operations the need a way to calculate a hash value.  The ```computeHashes()``` function will be a helper function to do this, which is why its marked as private.  This function will iterate over each hash function in the array containing hash functions and apply the function to the input. Then it will perform modulo on this value by the array's size.  This will give us an index for us to use in our array of booleans to change the corresponding value to ```true```.  The output of this function will be an array of indices.
 
 ```swift
 private func computeHashes(_ value: T) -> [Int] {
