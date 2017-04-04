@@ -6,7 +6,7 @@ image: https://static.pexels.com/photos/29781/pexels-photo-29781.jpg
 ---
 
 
-Imagine that in your iOS app you have a UIWebView that loads an arbitrary URL.  There are plenty of malicious sites on the web and we should certainly take actions to prevent or warn our users if they attempt to access a nefarious site.  This begs the question: what's an efficient way of checking if the domain in a URL is known to be a malicious site? Perhaps as a first pass at the problem, you would find a dossier of malicious domains, store the dossier in a set, and check to see if the domain in the arbitrary URL exists in the set.
+Imagine that in your iOS app you have a UIWebView that loads an arbitrary URL.  There are plenty of malicious sites on the web and let's say we wanted to warn our users if they attempt to access a nefarious site.  This begs the question: what's an efficient way of checking if the domain in a URL is known to be a malicious site? Perhaps as a first pass at the problem, you would find a dossier of malicious domains, store the dossier in a set, and check to see if the domain in the arbitrary URL exists in the set.
 
 ```swift
 var badDomains: Set<String> = ["badguys.com", "drevil.me", "virus.io"]
@@ -21,7 +21,7 @@ if let validDomain = websiteToLoad?.host {
 }
 ```
 
-The problem with this approach is that as your dossier grows, so will its memory footprint because you are storing each domain name as a string.  In other words, a large dossier will consume a significant amount of memory. Is there a more efficient approach to maintain our list of bad domains without consuming too much memory?  Yes, we can instead use a Bloom filter, which is a space-efficient and probabilistic data structure.  
+The problem with this approach is that as your dossier grows, so will its memory footprint because you are storing each domain name as a string.  In other words, a large dossier will consume a significant amount of memory. Is there a more efficient approach to maintain our list of bad domains without consuming too much memory?  Yes, we could use a Bloom filter, which is a space-efficient and probabilistic data structure.  
 
 # The basic concept
 A Bloom filter can be conceptually thought of as a fixed-length array of bits. 
@@ -159,3 +159,4 @@ public func query(_ value: T) -> Bool {
 ```
 **NOTE**: $0 and $1 are shorthand syntax for the argument names.  Swift will automatically provide shorthand argument names to inline closures, e.g. $0, $1, $2, etc.
 
+## Check if the Bloom Filter is empty
