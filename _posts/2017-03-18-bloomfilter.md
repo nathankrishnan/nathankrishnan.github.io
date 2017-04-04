@@ -159,11 +159,13 @@ public func query(_ value: T) -> Bool {
 ```
 **NOTE**: $0 and $1 are shorthand syntax for the argument names.  Swift will automatically provide shorthand argument names to inline closures, e.g. $0, $1, $2, etc.
 
-## Check if the Bloom Filter is empty
-Checking to see if the Bloom Filter is empty is easy.  Just how in the previous section we reduced the array to get a result of  ```true``` or ```false```, we can essentially use the same technique to see if any ```true```'s exist in the array.  As a reminder, the array was initialized to ```false``` in each of its indices.  The only tricky thing be cognizant in this step is the array is empty, meaning it only contains ```false```, return ```true```.  This is because this method in the Bloom Filter should ask the question, "Is the contents of the Bloom Filter empty?"
+## Checking if the Bloom Filter is empty
+Checking to see if the Bloom Filter is empty is easy.  Just how in the previous section we reduced the array to get a result of  ```true``` or ```false```, we can essentially use the same technique to see if any ```true```'s exist in the array.  As a reminder, the array was initialized to ```false``` in each of its indices.  The only tricky thing be cognizant in this step is if the array is empty, meaning it only contains ```false```, return ```true```.  This is because this method in the Bloom Filter should ask the question, "Is the contents of the Bloom Filter empty?"
 
 ```swift
 public func isEmpty() -> Bool {
     return array.reduce(true) { prev, next in prev && !next }
 }
 ```
+## Applying the Bloom Filter to our first example
+
