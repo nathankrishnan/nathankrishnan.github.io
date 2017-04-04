@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Big O Notation"
-categories: markdown
+categories: algorithms
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Writing_on_the_whiteboard.jpg/1280px-Writing_on_the_whiteboard.jpg
 image2: https://static.pexels.com/photos/7067/notes-clean-hero-minimal.jpg
 ---
