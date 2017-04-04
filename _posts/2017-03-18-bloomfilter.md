@@ -187,7 +187,7 @@ if let validDomain = websiteToLoad?.host {
 ```
 **NOTE**: djb2 and sdbm are hash functions for strings. 
 
-We now have a data structure that can handle a large dossier of malicious websites!  For example, we could parse through the .csv file of [suspicious domains from the SANS Institute](https://isc.sans.edu/suspicious_domains.html) and store the entries in the Bloom Filter.  
+We now have a data structure that can handle a large dossier of malicious websites!  For example, we could parse through the .csv file of [suspicious domains from the SANS Institute](https://isc.sans.edu/suspicious_domains.html) and store the entries in the Bloom Filter.  Even though we've reached the end of this blog post, if you're curious to learn other applications for Bloom Filters check out [this section of its Wikipedia page](https://en.wikipedia.org/wiki/Bloom_filter#Extensions_and_applications).  
 
 
 
