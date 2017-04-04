@@ -168,4 +168,26 @@ public func isEmpty() -> Bool {
 }
 ```
 ## Applying the Bloom Filter to our first example
+To wrap up everything we've learn so far, let's revist our first example and replace the use of a set with a Bloom Filter.
+
+```swift
+let badDomains = BloomFilter<String>(size: 1024, hashFunctions: [djb2, sdbm])
+badDomains.insert("badguys.com")
+badDomains.insert("drevil.me")
+badDomains.insert("virus.io")
+
+let websiteToLoad = NSURL(string: "http://virus.io")
+if let validDomain = websiteToLoad?.host {
+    if badDomains.query(validDomain) {
+        print("The website is most likely bad!")
+    } else {
+        print("This website doesn't exist in our dossier. Let's proceed.")
+    }
+}
+```
+
+We now have a data structure that can handle a large dossier of malicious websites.  For example, we could parse through the .csv file of [suspicious domains from the SANS Institute](https://isc.sans.edu/suspicious_domains.html).
+
+**NOTE**: djb2 and sdbm are hash functions for strings. 
+
 
