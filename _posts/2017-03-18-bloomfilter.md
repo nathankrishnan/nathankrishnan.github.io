@@ -147,6 +147,15 @@ public func insert(_ element: T) {
 ```
 
 ## Querying for a Value
+To check to see if a value exists in the Bloom Filter, we first have to pass in the value in question into the ```computeHashes(_ value: T -> [Int])``` function.  As a reminder this function will take in the input, pass it through the hash functions we've included in our Bloom Filter, and the output will be an array of indices.  Now with this array of indices, we can map through our array and find all the results at the indices.  If all the results are ```true``` then we can return ```true``` to indicate the item was *found* or conversely ```false```.  As mentioned earlier, a result of ```true``` doesn't mean that the item you're looking for exists for certain.  It's a probabilistic yes, which is basically a maybe.  However if ```false``` is returned then you are guaranteed that the item was never entered.
 
-
+```
+public func query(_ value: T) -> Bool {
+    let hashValuePositions = computeHashes(value)
+    let valuesAtIndices = hashValuePositions.map() { hashValuePosition in array[hashValuePosition] }
+    let exists = valuesAtIndices.reduce(true, { $0 && $1 })
+    return exists
+}
+```
+**NOTE**: $0 and $1 are shorthand syntax for the argument names.  Swift will automatically provide shorthand argument names to inline closures, e.g. $0, $1, $2, etc.
 
