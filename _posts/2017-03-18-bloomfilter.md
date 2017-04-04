@@ -185,9 +185,10 @@ if let validDomain = websiteToLoad?.host {
     }
 }
 ```
-
-We now have a data structure that can handle a large dossier of malicious websites.  For example, we could parse through the .csv file of [suspicious domains from the SANS Institute](https://isc.sans.edu/suspicious_domains.html).
-
 **NOTE**: djb2 and sdbm are hash functions for strings. 
+
+We now have a data structure that can handle a large dossier of malicious websites!  For example, we could parse through the .csv file of [suspicious domains from the SANS Institute](https://isc.sans.edu/suspicious_domains.html) and store the entries in the Bloom Filter.  
+
+
 
 
