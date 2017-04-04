@@ -99,7 +99,7 @@ Will create an array with three 7's.
 
 The second array will store the hashing functions we will use.  
 
-## Computing Hash Values
+## Computing hash values
 
 Both the insert and query operations the need a way to calculate a hash value.  The ```computeHashes()``` function will be a helper function to do this, which is why its marked as private.  This function will iterate over each hash function in the array containing hash functions and apply the function to the input. Then it will perform modulo on this value by the array's size.  This will give us an index for us to use in our array of booleans to change the corresponding value to ```true```.  The output of this function will be an array of indices.
 
@@ -146,7 +146,7 @@ public func insert(_ element: T) {
 }
 ```
 
-## Querying for a Value
+## Querying for a value
 To see if a value exists in the Bloom Filter, we first have to pass the value in question into the ```computeHashes(_ value: T -> [Int])``` function.  As a reminder this function will take in the input, pass it through the hash functions we've included in our Bloom Filter, and the output will be an array of indices.  Now with this array of indices, we can iterate through our array and find all the results at the indices.  If all the results are ```true``` then we can return ```true``` to indicate the item was *found* or conversely ```false```.  As mentioned earlier, a result of ```true``` doesn't mean that the item you're looking for exists for certain.  It's a probabilistic yes, which is basically a maybe.  However if ```false``` is returned then you are guaranteed that the item was never entered.
 
 ```swift
