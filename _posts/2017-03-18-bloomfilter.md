@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using a Bloom filter to prevent users of your iOS app from accessing malicious sites"
+title:  "Using a Bloom Filter to prevent users of your iOS app from accessing malicious sites"
 categories: algorithms
 image: https://static.pexels.com/photos/29781/pexels-photo-29781.jpg
 ---
