@@ -32,7 +32,7 @@ A Bloom filter can be conceptually thought of as a fixed-length array of bits.
 
 Instead of inserting the value of an item into the array, we can just set some of these bits to ```1```.  To see if an item is present, we can check to see if its corresponding place in the array has a ```0``` or ```1```. To perform both of these operations we will use hash functions.  This is an important aspect to note.  You will provide multiple hash functions (typically two or three) for your Bloom filter to use, as it will reduce the chances of false positives occurring.
 
-Querying a Bloom filter will either return ```false```, meaning that the item is ***not*** in the set, or ```true```, meaning that the item ***might*** be in the set. In other words, if the Bloom filter returns ```false``` you're guaranteed that the item isn't in the set.  If it returns ```true```, there is a chance it could be false positive.
+Querying a Bloom filter will either return ```false```, meaning that the item is ***not*** in the array, or ```true```, meaning that the item ***might*** be in the array. In other words, if the Bloom filter returns ```false``` you're guaranteed that the item hasn't been entered before.  If it returns ```true```, there is a chance it could be false positive.
 
 # Inserting an item
 Let's walkthrough the steps of inserting an item and querying to check the presence of an item to solidify these concepts. For this example, we will work with a Bloom filter with a fixed-length size of 6 bits.  If we wanted to insert the string *"virus.io"* we would send it through our first hash function.  Let's say the output of this is: 1967507331.  We would then perform ```(value) moduluo (size of array)``` to get the index of which bit to set the value to 1. In our case ```1967507331 % 6 = 3```.  We will now set the value of the bit at index 3 to ```1```.  Our Bloom filter now looks like:
@@ -72,13 +72,13 @@ public class BloomFilter<T> {
         self.hashFunctions = hashFunctions
     }
     
-    private func computeHashes(_ value: T) -> [Int] {}
+    private func computeHashes(_ value: T) -> [Int]
     
-    public func insert(_ element: T) {}
+    public func insert(_ element: T)
     
-    public func query(_ value: T) -> Bool {}
+    public func query(_ value: T) -> Bool
    
-    public func isEmpty() {}
+    public func isEmpty()
 }
 ```
 
