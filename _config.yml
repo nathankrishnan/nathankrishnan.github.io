@@ -37,8 +37,8 @@ disqus: nathank
 # social icons and sharing options
 social:
   - icon:	medium
-    url:	https://twitter.com/nathankrishnan
-    desc: Follow me on twitter
+    url:	https://medium.com/@nathankrishnan
+    desc: Read my articles on Medium
     share_url: http://twitter.com/share
     share_title: ?text=
     share_link: "&amp;url="
@@ -46,7 +46,7 @@ social:
 
   - icon:	github
     url:	https://github.com/nathankrishnan
-    desc:	Fork me on github
+    desc:	Fork me on GitHub
     share_url:
     share_title:
     share_link:
