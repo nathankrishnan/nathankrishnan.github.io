@@ -44,7 +44,7 @@ social:
     share_link: "&amp;url="
 
 
-  - icon:	github
+  - icon:	github-alt
     url:	https://github.com/nathankrishnan
     desc:	Fork me on GitHub
     share_url:
